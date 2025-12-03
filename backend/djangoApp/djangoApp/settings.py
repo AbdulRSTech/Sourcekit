@@ -19,11 +19,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 #React app's build directory 
 REACT_APP_DIR = os.path.join(BASE_DIR.parent.parent, 'frontend', 'react-app', 'dist')
 
-# Debug: Print the path
-print(f"BASE_DIR: {BASE_DIR}")
-print(f"REACT_APP_DIR: {REACT_APP_DIR}")
-print(f"Does REACT_APP_DIR exist? {os.path.exists(REACT_APP_DIR)}")
-print(f"Does index.html exist? {os.path.exists(os.path.join(REACT_APP_DIR, 'index.html'))}")
+# static url
+STATIC_URL = '/static/'
+
+# media url
+MEDIA_URL = '/media/'
+
+# static file directories
+STATICFILES_DIRS = [
+    REACT_APP_DIR,
+]
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
@@ -123,8 +128,6 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
-
-STATIC_URL = 'static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field

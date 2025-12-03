@@ -1,3 +1,2 @@
-yt-dlp
-pillow
 django
+yt-dlp 
