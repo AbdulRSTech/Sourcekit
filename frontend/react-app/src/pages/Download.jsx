@@ -180,9 +180,9 @@ const Download = () => {
     }
 
     return (
-        {resourceMessage && <p className="text-white font-bold">{resourceMessage}</p>}
-
         <form className="flex flex-col text-white gap-5">
+            {resourceMessage && <p className="text-white font-bold">{resourceMessage}</p>}
+
             <input 
                 type="text" 
                 name="title" 
@@ -243,8 +243,6 @@ const Download = () => {
                 onChange={(event) => setSearchWord(event.target.value)}
                 className="p-2 bg-gray-800 rounded"
             />
-
-            {keywordMessage && <p className="text-white font-bold">{keywordMessage}</p>}
             
             <button 
                 type="button"
@@ -254,6 +252,7 @@ const Download = () => {
             >
                 Add keyword
             </button>
+            {keywordMessage && <p className="text-white font-bold">{keywordMessage}</p>}
             {isSearching && <p className="text-white font-bold">Searching...</p>}
 
             <button 
