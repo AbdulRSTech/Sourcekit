@@ -2,6 +2,7 @@ import os
 from pathlib import Path
 import yt_dlp
 
+# main function used to manually run file for tests before proper testing implemented
 def main():
     pass
 
