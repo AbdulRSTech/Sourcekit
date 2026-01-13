@@ -1,13 +1,13 @@
 import React, {useState, useEffect} from 'react'
-import {useCSRFToken} from '../utils/csrfToken'
+import { useCSRFToken } from '../utils/csrfToken'
 
-const Search = () => {
+const Resource = () => {
     const {getCSRFToken} = useCSRFToken()
     const token = getCSRFToken()
 
     return (
-        <h1>Search Resources</h1>
+        <h1>Resource</h1>
     )
 }
 
-export default Search
+export default Resource
